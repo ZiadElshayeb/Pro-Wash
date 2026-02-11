@@ -16,5 +16,4 @@ COPY . .
 # Expose port
 EXPOSE 5000
 
-# Run the webhook server
-CMD ["python", "-m", "uvicorn", "webhook:app", "--host", "0.0.0.0", "--port", "5000"]
+CMD ["uvicorn", "app.webhook:app", "--host", "0.0.0.0", "--port", "5000"]
